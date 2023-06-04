@@ -1,0 +1,564 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="Conatct style.css">
+<title>Tally Cloud </title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+<style>
+  *,
+  *::after,
+  *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  main {
+      width: 90%;
+      margin: 2em auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .accordion__container {
+      margin-bottom: 10px;
+      /*background: #1f3485cf;*/
+      background-repeat: no-repeat;
+
+      padding: 0em 0em;
+      box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
+      width: 80%;
+  }
+
+      .accordion__container:last-type {
+          margin-bottom: 0;
+      }
+
+  .accordion__question__container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background:#1f3485cf;
+      padding:10px;
+      cursor: pointer;
+  }
+
+  .accordion__question {
+      color: #fff;
+  }
+
+  .accordion__btn {
+      display: inline-block;
+      background: none;
+      border: none;
+      border: 2px solid currentColor;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+  }
+
+      .accordion__btn i {
+          font-size: 1.2em;
+          padding: 0.15em;
+      }
+
+  .accordion__answer__container {
+      display: none;
+  }
+
+  .active__accordion {
+      display: block;
+  }
+
+
+
+
+
+.btn-link{
+  background: #495a9c;
+  max-width:100%;
+  height: 100%;
+}
+
+.col-xs-1{
+  flex: 0 0 8.333333%;
+  max-width: 8.333333%;
+  position: relative;
+  width: 100%;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.col-xs-11{
+  flex: 0 0 90.333333%;
+  max-width: 90.333333%;
+  position: relative;
+  width: 100%;
+  padding-right: 0px;
+  
+}
+</style>
+
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+  }
+</script>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<body>
+    <!--Navigation bar-->
+  <div id="nav-placeholder">  </div>
+  <script>
+  $(function(){
+    $("#nav-placeholder").load("header.html");
+  });
+     
+  </script>
+  <br><br>
+  <br>
+  <br>
+             <div class="col-sm-12" style="background-color:white ;" class ="Faq" >
+                <center>
+                    <p style="color:black  ; font-size: 50px;">Frequently Asked Questions</p>
+                    <p style="font-size: 30px;">Answer To all the questions you might have , before selecting us</p>
+
+                </center>
+                
+
+             </div>
+             <center>
+                <div class="accordion__container">
+                                        
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 1 How this software works?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">Our Excel to Tally software is designed in Microsoft Excel using Excel VBA capabilities. There are multiple templates given in QuikAccount Excel sheet for each type of transaction like sales, purchase, receipt, payments etc. User need to import or copy there format in QuikAccount templates and validate. Once the data is copied in our format and validation is complete. User can export all that excel data to tally in single click.</p>
+                    </div>
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 2 Which version of Tally Supported.</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">All versions of Tally 9, Tally.ERP9 and Tally Prime.</p>
+                    </div>
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 3 Is it lifetime or AMC based?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">We have both types of licenses. If you want subscription based, you can go with yearly license. In this case you need to pay renewal charges every year. If you want to pay once, please go with lifetime licenses.</p>
+                    </div>
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 4 Is it Single User or Multi-User ?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">We have both options. Single user license will work on 1 PC only. While multi user license can work on any number of PC with the same tally serial no.  We register multi-user license with your multi-user tally serial no., then you can use QuikAccount on all those computers where you are using said tally serial.</p>
+                    </div>
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 5 Can we switch QuikAccount from one PC to another?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">Yes QuikAccount single-user license can be easily reactivate on any PC. If you activate in one PC, it will get deactivate from another PC. But there is switching limit in case of single user license i.e. 25 for yearly license and 200 for lifetime licenses.</p>
+                    </div>
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 6 Can we use single user license with multiple tally companies?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">Yes. You can use this license with unlimited tally companies on single computer.</p>
+                    </div>
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 7 Is there any limit on number of transaction that we can process?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">No. You can process unlimited transaction after purchasing our license.</p>
+                    </div>
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 8 Is there any support from the Company?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">Yes. Company support is available between 10:30 am to 6:30 pm from Monday to Saturday via remote desktop software. In case of lifetime products, support is available for 1 year only.</p>
+                    </div>
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 9 Is there any trial available?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">Yes. We provide trial of 30 days in which you can process maximum of 500 trancations. For availing demo, please call our customer care at +91-93584-44502</p>
+                    </div>
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 10 Whether it support all tally vouchers?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">QuikAccount support Item Creation, Ledger Creation, Purchase, Sales, Debit Note, Credit Note, Purchase Orders, Sales Orders, Journal, Receipt, Payment, Contra, Stock Journal, Material In/Out, Payroll Voucher. It can work with Inventory and without Inventory both.</p>
+                    </div>
+                </div>
+                <div id="category_11" style="text-align: left;width: 100%;font-size: 23px;font-weight: bold;text-decoration: underline;line-height: 30px;margin-left: 16px;text-transform: uppercase;margin-bottom:10px;">
+                    Technical
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 1 Does QuikAccount auto-create new stock items in Tally?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">Yes.  When user copies his data in QuikAccount (Sales/Purchase) Template, he needs to validate that data from ‘Validate’ button. After clicking on ‘Validate’ button, our software verify each stock item with the tally masters and highlight all the new stock items as well as transfer the new stock items in ItemImport sheet. With ItemImport Sheet user can easily create new stock items.</p>
+                    </div>
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 2 Does QuikAccount auto-create new ledgers in Tally?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">Yes.  When user copies his data in QuikAccount (Sales/Purchase) Template, he needs to validate that data from ‘Validate’ button. After clicking on ‘Validate’ button, our software verify each ledger with the tally masters and highlight all the new ledgers as well as transfer the new ledgers in ‘Ledger’ sheet. With ‘Ledger’ Sheet user can easily create new ledgers.</p>
+                    </div>
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 3 How to resolve date error?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">QuikAccount (Excel to Tally) software supports all types of date format but it should be excel readable. Some times date is stored in text format in excel. To correct this copy entire date column in blank excel file, now select entire date column. Now open find and replace window by pressing Ctrl + H, find and replace either &#39;-&#39; or &#39;/&#39; as available in your data. Once replacement is complete your date will be rectified.</p>
+                    </div>
+                </div>
+            <div class="accordion__container">
+                    
+                    <div class="accordion__question__container accordion__btnnew">
+                        <h2 class="accordion__question">Q. 4 Unable to open QuikAccount software from desktop shortcut?</h2>
+                        <button class="accordion__btn"><i class="fa fa-plus"></i> </button>
+                    </div>
+                    <div class="accordion__answer__container" style="padding: 8px;margin-top: 7px;font-size:18px;background:#fff;">
+                        <p class="accordion__answer" style="color:#000">Open Windows run box by pressing window key + R. Type %appdata% in run box and press enter. One &#39;Roaming&#39; folder will open. Now find QuikAccount folder and open it. Here you will find QuikAccount Excel file, use this file to create new desktop shortcut.</p>
+                    </div>
+                </div>
+</main>
+</div>
+</div>
+</div>
+</section>
+             </center>
+            
+
+
+
+
+
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+<script id="rendered-js">
+$(document).ready(function(){
+    if ($(window).width() < 769) { 
+        $('#expand-sidebar').removeClass('d-none');
+        $('#sidebar').addClass('d-none');
+    }
+
+    if($(window).width() < 576){
+        $('#topic-sidebar').addClass('col-xs-1');
+        $('#faq_container').addClass('col-xs-11')
+    }
+
+
+    $('#expand-sidebar').click(function(){
+        if($(window).width() < 576){
+            $('#topic-sidebar').addClass('col-xs-12');
+            $('#faq_container').addClass('col-xs-12');
+            $('#topic-sidebar').removeClass('col-xs-1');
+            $('#faq_container').removeClass('col-xs-11');
+            $('#faq_container').find('main').css('width','100%');
+            $('#sidebar').css('min-height','200');
+        }else if($(window).width() > 576 && $(window).width() < 769){
+            $('#sidebar').css('min-height','200');
+            $('#topic-sidebar').addClass('col-sm-12');
+            $('#faq_container').addClass('col-sm-12');
+            $('#topic-sidebar').removeClass('col-sm-1');
+            $('#faq_container').removeClass('col-sm-11');
+        }else{
+            $('#topic-sidebar').addClass('col-lg-3');
+            $('#topic-sidebar').removeClass('col-lg-1');
+            $('#faq_container').addClass('col-lg-9');
+            $('#faq_container').removeClass('col-lg-11');
+        }
+            
+        $(this).addClass('d-none');
+        $('#sidebar').removeClass('d-none');
+        
+    });
+
+        
+        
+
+    
+});
+    
+
+    
+    const btns = document.querySelectorAll('.accordion__btnnew');
+    const answers = document.querySelectorAll('.accordion__answer__container');
+    //const icons = document.querySelectorAll('.fa');
+
+
+
+    for (let i = 0; i < btns.length; i++) {
+        if (window.CP.shouldStopExecution(0)) break;
+
+        btns[i].addEventListener('click', function () {
+            for (let j = 0; j < btns.length; j++) {
+                if (window.CP.shouldStopExecution(1)) break;
+                if (j !== i) {
+                    answers[j].classList.remove('active__accordion');
+                }
+            } window.CP.exitedLoop(1);
+            answers[i].classList.toggle('active__accordion');
+        });
+    } window.CP.exitedLoop(0);
+    //# sourceURL=pen.js
+
+
+
+
+
+
+
+</script>
+    
+
+
+    <script>
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        $('.signlevideo .carousel-main').owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: false,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            margin: 10,
+            nav: true,
+            dots: false,
+            navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+
+        })
+
+
+        $('.signlevideo2 .carousel-main').owlCarousel({
+            items: 2,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            margin: 10,
+            nav: true,
+            dots: false,
+            navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+
+                600: {
+                    items: 1
+                },
+
+                1024: {
+                    items: 2
+                },
+
+                1366: {
+                    items: 2
+                }
+            }
+        })
+
+
+
+
+        $('.signlevideo3 .carousel-main').owlCarousel({
+            items: 1,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause: true,
+            margin: 10,
+            nav: true,
+            dots: false,
+            navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+
+                600: {
+                    items: 1
+                },
+
+                1024: {
+                    items: 1
+                },
+
+                1366: {
+                    items: 1
+                }
+            }
+        })
+
+    </script>
+
+    <!--
+    <script type="text/javascript">
+
+       $('.pricingtable .carousel-main').owlCarousel({
+       items:3,
+       loop: true,
+       autoplay: true,
+       autoplayTimeout:3000,
+       margin: 10,
+       nav: true,
+       dots: false,
+       navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+    })
+
+    </script> -->
+
+    <script type="text/javascript">
+
+        jQuery(".pricingtable .carousel-main").owlCarousel({
+            autoplay: false,
+            lazyLoad: true,
+            loop: true,
+            margin: 0,
+            nav: true,
+            dots: false,
+            /*
+           animateOut: 'fadeOut',
+           animateIn: 'fadeIn',
+           */
+            responsiveClass: true,
+            autoHeight: true,
+            autoplayTimeout: 7000,
+            smartSpeed: 800,
+            nav: true,
+            navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+
+                600: {
+                    items: 2
+                },
+
+                1024: {
+                    items: 3
+                },
+
+                1366: {
+                    items: 3
+                }
+            }
+        });
+
+
+        $(function () {
+            // Floating Contact Widget Trigger
+            $(".amg-floating-icon").on("mouseenter", function () {
+                $(this).closest(".amg-floating-contact-wrap").addClass("hover")
+            });
+            $(".amg-floating-contact-wrap").on("mouseleave", function () {
+                $(this).removeClass("hover");
+            });
+
+            // Demo
+            var interval = setInterval(function () {
+                $(".amg-floating-icon").trigger("mouseenter");
+
+                setTimeout(function () {
+                    $(".amg-floating-icon").trigger("mouseleave");
+                }, 3000);
+            }, 3000);
+
+            setTimeout(function () {
+                // stop demo
+                clearInterval(interval);
+            }, 6000);
+        })
+
+    </script>
+
+    <!-- <script type="text/javascript">
+       wow = new WOW({
+       animateClass: "animated",
+       offset: 100,
+       callback: function (i) {
+          console.log("WOW: animating <" + i.tagName.toLowerCase() + ">")
+       }
+    })
+    </script> -->
+
+    <script>
+        function showsaveconpopup(viewname) {
+            $('#viewnamelay').val(viewname);
+            $('#getsavecontectpopup').modal();
+        }
+    </script>
+
+</body>
+</html>
